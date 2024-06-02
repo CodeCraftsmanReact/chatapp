@@ -6,7 +6,7 @@ import ChatWindow from '../components/ChatWindow'
 
 const ChatPage = () => {
   return (
-    <div>
+    <div className='relative min-h-screen'>
         <SearchBar/>
         <ChatWindow/>
         <Sidebar/>
