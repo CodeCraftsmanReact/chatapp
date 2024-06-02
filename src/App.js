@@ -1,16 +1,22 @@
-import Background from "./components/Background";
-import GithubIcon from "./components/GithubIcon";
-import LoginForm from "./components/LoginForm";
+import React from "react";
+import {
+  BrowserRouter as Router,
+  Routes,
+  Route,
+  Link
+} from "react-router-dom";
+import HomePage from "./pages/HomePage";
+import ChatPage from "./pages/ChatPage";
+
 
 function App() {
   return (
-    <div className="flex flex-col gap-4 place-content-center items-center min-h-screen text-white">
-        <h3 className="text-3xl ">CodeCraftsmanReact</h3>
-        <p className="text-lg">Chat Application</p>
-        <LoginForm/>
-        <Background/>
-        <GithubIcon/>
-    </div>
+    <Router>
+      <Routes>
+        <Route path='/' element={<HomePage/>}/>
+        <Route path='/chat' element={<ChatPage/>}/>
+      </Routes>
+    </Router>
   );
 }
 
